@@ -1,2 +1,2 @@
-# analysis_social_spatial_airbnb
-An Analysis of Social and Spatial Features Associated with Room Sales of Airbnb
+# Analysis social spatial airbnb
+_An Analysis of Social and Spatial Features Associated with Room Sales of Airbnb
