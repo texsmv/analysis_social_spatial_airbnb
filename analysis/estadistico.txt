@@ -1,0 +1,38 @@
+
+variables cuantitativas
+                                            r                pendiente
+minimum_nights_x                -0.0041963299906949015 -0.015575215942989667
+number_of_reviews               -0.03958088646687089 -0.09549948154504628
+reviews_per_month               -0.07438315603477284 -5.787674333606661
+calculated_host_listings_count  0.16529037968558608 0.7061996256482086
+accommodates                    0.5610913476942396 38.779478274273835
+bathrooms                       0.24118302744026968 30.6497724019136
+bedrooms                        0.38334070231209755 37.87416863808638
+beds                            0.42199210036175694 36.969100887851724
+cleaning_fee                    0.5314757441752354 1.8160767318971751
+minimum_nights_y                -0.0041963299906949015 -0.015575215942989667
+maximum_nights                  0.006086138778297899 0.00015373293531637796
+minimum_minimum_nights          -0.004047262256887694 -0.015069333218244729
+maximum_minimum_nights          -0.0011923719050358664 -0.004286292208941844
+minimum_maximum_nights          0.004543529949037631 0.00011475608447441069
+maximum_maximum_nights          0.006028728621735564 0.00015227682923574102
+review_scores_rating            0.01857142324852408 0.283140093656569
+review_scores_accuracy          -0.028833402477287162 -4.485018705434289
+review_scores_cleanliness       0.04868882313270077 6.092101987272938
+review_scores_checkin           -0.02294750942886754 -3.826348953714334
+review_scores_communication     -0.05987000685870177 -10.2128174169987
+review_scores_location          0.06787404751093713 13.191197975498815
+review_scores_value             -0.0375739518271846 -5.145435184026198
+
+
+
+variables cualitativas
+                            F
+room_type              326.602852
+bed_type               49.313139
+property_type          63.201849
+host_response_time     10.124837
+host_response_rate     10.384409 
+cancellation_policy    254.013946
+
+todas las variables cualitativas tiene correlacion significativa
