@@ -13,6 +13,9 @@ from keras.models import load_model
 laten_dim = 5
 #--------------------------------------------------------
 
+df_coordenadas = pd.read_csv("caracteristicas_coord.csv")
+
+
 data = pd.read_csv("caracteristicas.csv")
 data = data.drop(data.columns[0], axis = 1)
 data = data.drop(labels=['id'], axis=1)
@@ -38,6 +41,15 @@ def decode_batch(x):
  
 
 encoded_data = encode_batch(data)
+
+df_encoded_data = pd.DataFrame(encoded_data)
+
+print(df_encoded_data.shape)
+print(df_coordenadas.shape)
+df_encoded_data["latitude"] = df_coordenadas["latitude"].values
+df_encoded_data["longitude"] = df_coordenadas["longitude"].values
+encoded_data_with_coord = df_encoded_dara.to_numpy()
+
 print(encoded_data )
 
 
@@ -45,6 +57,9 @@ import pickle
  
 pickle_file = open('todo2.pk', 'wb')
 pickle.dump(encoded_data, pickle_file)
+
+pickle_file = open('todo3.pk', 'wb')
+pickle.dump(encoded_data_with_coord, pickle_file)
 
 print("--------------------------")
 print("Model loaded succesfully")
