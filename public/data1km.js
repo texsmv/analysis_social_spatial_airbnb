@@ -6,10 +6,13 @@ let lugaresTuristicos=[]
 let index_lugares = []
 data = []
 for (let i = 0; i<34;i++){
-    lugaresTuristicos.push(data1km[i].nombre)
-    index_lugares.push(i)
-    for(let j = 0;j<data1km[i].promedio_normalizado;j++){
-        data.push([j,i,data1km[i].nor_n_ar])
+    if(i!=8){
+
+        lugaresTuristicos.push(data1km[i].nombre)
+        index_lugares.push(i)
+        for(let j = 0;j<data1km[i].promedio_normalizado;j++){
+            data.push([j,data1km[i].nombre,data1km[i].nor_n_ar])
+        }
     }
     // data.push(pos)
 }
