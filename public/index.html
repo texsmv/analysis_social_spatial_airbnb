@@ -21,7 +21,7 @@
         <div class="cuadro1">
             Precio
 
-            <div class="container">
+            
                     <div class="row">
                         <div class="input-field col s4">
                         <select id="preciovs">
@@ -42,14 +42,14 @@
                         </div>
                     </div> 
                     <div class="row">
-                            <img src="/images/bathrooms.jpg" id="image-swap-karen" style="width: 400px">
+                            <img src="/images/bathrooms.jpg" id="image-swap-karen" style="width: 650px">
     
                     </div>
-            </div>
+            
 
         </div>
         <div class="cuadro2">
-            <div class="container">
+            
                     <div class="row">
                             <div class="input-field col s4">
                             <select id="atributo1">
@@ -74,11 +74,11 @@
                     </div>
                     
                     <div class="row">
-                        <img src="/moran/calculated_host_listings_count@availability_365.png" id="image-swap" style="width: 650px">
+                        <img src="/moran/calculated_host_listings_count@availability_365.png" id="image-swap" style="width: 7 50px">
 
                     </div>
 
-            </div>
+            
             
             
             
@@ -112,20 +112,28 @@
 
 
         </div>
-        <div class="mapa" id="mapa">
-            
+        <div class="mapa" id="mapa" style="height:600px;">
         </div>
+    
+        
+    
         <div class="redondo" id="main" style="height:600px;">
             redondo
         </div>
+
+        <div class="mapa2" id="mapa-dos">
+                <img src="tur.jpeg" alt="" >
+        </div> 
+
+        <div class="mapa3" id="mapa-tres" style="height:600px;">
+        </div>
+        
     </section>
-
-
-
 
     <script type="text/javascript">
         // based on prepared DOM, initialize echarts instance
         var myChartMapa = echarts.init(document.getElementById('mapa'));
+        var myChartMapaTres = echarts.init(document.getElementById('mapa-tres'));
         var myChart = echarts.init(document.getElementById('main'));
 
 console.log(data1km);
@@ -227,9 +235,11 @@ option = {
 };
 
         myChart.setOption(option);
+
     </script>
 
 <script src="mapa.js"></script>
+<script src="mapa2.js"></script>
 <script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

@@ -4,7 +4,9 @@
     grid-template-areas: 
     'title title title title'
     'cuadro1 cuadro1 cuadro2 cuadro2'
-    'mapa  mapa redondo redondo';
+    'mapa  mapa redondo redondo'
+    'mapa2 mapa2 mapa3 mapa3' ;
+
     /* 'mapa  redondo  redondo'; */
     grid-gap: 10px;
     /* background-color: #205E86; */
@@ -41,4 +43,12 @@ body{
     align-content: center;
     background-color: white;
     /* align-items:  */
+}
+
+.mapa2{
+    grid-area: mapa2;
+}
+
+.mapa3{
+    grid-area: mapa3;
 }
