@@ -4,6 +4,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/0.97.5/css/materialize.min.css">
     <link rel="stylesheet" href="estilo.css">
     <script src="echarts.min.js"></script>
     <script src="data1km.js"></script>
@@ -19,29 +20,45 @@
             cuadro1
         </div>
         <div class="cuadro2">
+            <div class="container">
+                    <div class="row">
+                            <div class="input-field col s4">
+                            <select id="atributo1">
+                                    <option value="availability_365">availability_365</option>
+                                    <option value="calculated_host_listings_count">calculated_host_listings_count</option>
+                                    <option value="minimum_nights">minimum_nights</option>
+                                    <option value="price">price</option>
+                                    <option value="reviews_per_month">reviews_per_month</option>
+                                    <option value="number_of_reviews">number_of_reviews</option>
+                                </select>
+                            </div>
+                            <div class="input-field col s4">
+                                <select id="atributo2">
+                                        <option value="availability_365">availability_365</option>
+                                        <option value="calculated_host_listings_count">calculated_host_listings_count</option>
+                                        <option value="minimum_nights">minimum_nights</option>
+                                        <option value="price">price</option>
+                                        <option value="reviews_per_month">reviews_per_month</option>
+                                        <option value="number_of_reviews">number_of_reviews</option>
+                                    </select>
+                            </div>
+                    </div>
+                    
+                    <div class="row">
+                        <img src="/moran/calculated_host_listings_count@availability_365.png" id="image-swap">
+
+                    </div>
+
+            </div>
             
-            <select id="atributo1">
-                <option value="availability_365">availability_365</option>
-                <option value="calculated_host_listings_count">calculated_host_listings_count</option>
-                <option value="minimum_nights">minimum_nights</option>
-                <option value="price">price</option>
-                <option value="reviews_per_month">reviews_per_month</option>
-                <option value="number_of_reviews">number_of_reviews</option>
-            </select>
             
-            <select id="atributo2">
-                    <option value="availability_365">availability_365</option>
-                    <option value="calculated_host_listings_count">calculated_host_listings_count</option>
-                    <option value="minimum_nights">minimum_nights</option>
-                    <option value="price">price</option>
-                    <option value="reviews_per_month">reviews_per_month</option>
-                    <option value="number_of_reviews">number_of_reviews</option>
-                </select>
             
-            <img src="/moran/calculated_host_listings_count@availability_365.png" id="image-swap">
+            
             
             <script>
             $(document).ready(function(){
+                $('select').formSelect();
+
                 $('#atributo1').change( function() {    
                     let ruta = "/moran/"+$(this).val()+"@"+$('#atributo2').val()+".png";
                     console.log(ruta);
@@ -60,10 +77,10 @@
 
 
         </div>
-        <div class="mapa">
-            mapa
+        <div class="mapa" id="mapa">
+            
         </div>
-        <div class="redondo" id="main" style="/*width: 600px;*/height:800px;">
+        <div class="redondo" id="main" style="height:600px;">
             redondo
         </div>
     </section>
@@ -73,6 +90,7 @@
 
     <script type="text/javascript">
         // based on prepared DOM, initialize echarts instance
+        var myChartMapa = echarts.init(document.getElementById('mapa'));
         var myChart = echarts.init(document.getElementById('main'));
 
 console.log(data1km);
@@ -176,7 +194,7 @@ option = {
         myChart.setOption(option);
     </script>
 
-
-    
+<script src="mapa.js"></script>
+<script src="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/js/materialize.min.js"></script>
 </body>
 </html>

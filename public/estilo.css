@@ -2,9 +2,9 @@
 .contenido{
     display: grid;
     grid-template-areas: 
-    'title title title'
-    'cuadro1 cuadro2 cuadro2'
-    'mapa  mapa redondo';
+    'title title title title'
+    'cuadro1 cuadro1 cuadro2 cuadro2'
+    'mapa  mapa redondo redondo';
     /* 'mapa  redondo  redondo'; */
     grid-gap: 10px;
     /* background-color: #205E86; */
@@ -17,7 +17,7 @@ body{
     background:  #205E86;
 }
 .contenido > div {
-    background-color: white;
+    background-color: rgba(255, 255, 255, 0.8);
     text-align: center;
     padding: 20px 0;
     border-radius: 15px;    
@@ -41,9 +41,4 @@ body{
     align-content: center;
     background-color: white;
     /* align-items:  */
-    padding-right: 0px;
-}
-
-element.style{
-    
 }
