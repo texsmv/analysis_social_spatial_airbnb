@@ -1,0 +1,44 @@
+
+.contenido{
+    display: grid;
+    grid-template-areas: 
+    'title title title'
+    'cuadro1 cuadro2 cuadro2'
+    'mapa  mapa redondo';
+    /* 'mapa  redondo  redondo'; */
+    grid-gap: 10px;
+    /* background-color: #205E86; */
+    padding: 10px;
+    height: 250px;  
+}
+
+body{
+    margin: 0;
+    background:  #205E86;
+}
+.contenido > div {
+    background-color: rgba(255, 255, 255, 0.8);
+    text-align: center;
+    padding: 20px 0;
+    border-radius: 15px;    
+    /* font-size: 30px; */
+  }
+
+  .title{ 
+    grid-area: title;
+}
+.cuadro1{
+    grid-area: cuadro1;
+}
+.cuadro2{
+    grid-area: cuadro2;
+}
+.mapa{
+    grid-area: mapa;
+}
+.redondo{
+    grid-area: redondo;
+    align-content: center;
+    background-color: white;
+    /* align-items:  */
+}

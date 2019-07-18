@@ -8,9 +8,9 @@ from keras.models import load_model
 
 #-------------------- change this ------------------------
 # laten_dim = 15
-# laten_dim = 10
+laten_dim = 10
 # laten_dim = 3
-laten_dim = 5
+# laten_dim = 5
 #--------------------------------------------------------
 
 df_coordenadas = pd.read_csv("caracteristicas_coord.csv")
@@ -48,9 +48,10 @@ print(df_encoded_data.shape)
 print(df_coordenadas.shape)
 df_encoded_data["latitude"] = df_coordenadas["latitude"].values
 df_encoded_data["longitude"] = df_coordenadas["longitude"].values
-encoded_data_with_coord = df_encoded_dara.to_numpy()
+encoded_data_with_coord = df_encoded_data.to_numpy()
 
-print(encoded_data )
+print(encoded_data.shape )
+
 
 
 import pickle
@@ -58,8 +59,8 @@ import pickle
 pickle_file = open('todo2.pk', 'wb')
 pickle.dump(encoded_data, pickle_file)
 
-pickle_file = open('todo3.pk', 'wb')
-pickle.dump(encoded_data_with_coord, pickle_file)
+# pickle_file = open('todo3.pk', 'wb')
+# pickle.dump(encoded_data_with_coord, pickle_file)
 
 print("--------------------------")
 print("Model loaded succesfully")
