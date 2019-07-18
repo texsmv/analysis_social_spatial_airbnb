@@ -1,0 +1,22 @@
+{
+  "name": "analysis_social_spatial_airbnb",
+  "version": "1.0.0",
+  "description": "_An Analysis of Social and Spatial Features Associated with Room Sales of Airbnb",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/texsmv/analysis_social_spatial_airbnb.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/texsmv/analysis_social_spatial_airbnb/issues"
+  },
+  "homepage": "https://github.com/texsmv/analysis_social_spatial_airbnb#readme",
+  "dependencies": {
+    "express": "^4.17.1"
+  }
+}
