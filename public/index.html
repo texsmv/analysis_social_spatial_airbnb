@@ -7,6 +7,7 @@
     <link rel="stylesheet" href="estilo.css">
     <script src="echarts.min.js"></script>
     <script src="data1km.js"></script>
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
     <title>Airbnb analisis </title>
 </head>
 <body>
@@ -18,7 +19,46 @@
             cuadro1
         </div>
         <div class="cuadro2">
-            cuadro2
+            
+            <select id="atributo1">
+                <option value="availability_365">availability_365</option>
+                <option value="calculated_host_listings_count">calculated_host_listings_count</option>
+                <option value="minimum_nights">minimum_nights</option>
+                <option value="price">price</option>
+                <option value="reviews_per_month">reviews_per_month</option>
+                <option value="number_of_reviews">number_of_reviews</option>
+            </select>
+            
+            <select id="atributo2">
+                    <option value="availability_365">availability_365</option>
+                    <option value="calculated_host_listings_count">calculated_host_listings_count</option>
+                    <option value="minimum_nights">minimum_nights</option>
+                    <option value="price">price</option>
+                    <option value="reviews_per_month">reviews_per_month</option>
+                    <option value="number_of_reviews">number_of_reviews</option>
+                </select>
+            
+            <img src="/moran/calculated_host_listings_count@availability_365.png" id="image-swap">
+            
+            <script>
+            $(document).ready(function(){
+                $('#atributo1').change( function() {    
+                    let ruta = "/moran/"+$(this).val()+"@"+$('#atributo2').val()+".png";
+                    console.log(ruta);
+                    
+                    $("#image-swap").attr("src",ruta);
+                });
+
+                $('#atributo2').change( function() {    
+                    let ruta = "/moran/"+$('#atributo1').val()+"@"+$(this).val()+".png";
+                    console.log(ruta);
+                    
+                    $("#image-swap").attr("src",ruta);
+                });
+            });
+            </script>
+
+
         </div>
         <div class="mapa">
             mapa
