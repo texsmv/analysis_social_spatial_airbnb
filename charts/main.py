@@ -1,6 +1,6 @@
 import pandas as pd
 import numpy as np
-data = pd.read_csv('data1km.csv')
+data = pd.read_csv('data2km.csv')
 numeros = np.array(data['n_airbnbs'])
 
 # print(numeros)
@@ -21,5 +21,5 @@ a = round(df_normalized*10)
 data['nor_n_ar'] = a
 data['promedio_normalizado'] = round(data['promedio_normalizado'])
 
-data.to_json('data1km.json',orient='index')
+data.to_json('data2km.json',orient='index')
 print(data)
