@@ -17,7 +17,34 @@
             <h1>Analysis social spatial Airbnb </h1>
         </div>
         <div class="cuadro1">
-            cuadro1
+            Precio
+
+            <div class="container">
+                    <div class="row">
+                        <div class="input-field col s4">
+                        <select id="preciovs">
+                                <option value="accommodate_cs_">accommodate_cs_</option>
+                                <option value="accomodates">Accomodates</option>
+                                <option value="bathrooms">Bathrooms</option>
+                                <option value="bed_type">Bed tuype</option
+                                <option value="bedrooms">Bedroom</option>
+                                <option value="beds">Beds</option>
+                                <option value="calculated_host_listings_count">calculated_host_listings_count</option>
+                                <option value="cancellation_policy">cancellation_policy</option>
+                                <option value="cleaning_fee">cleaning_fee</option>
+                                <option value="host_response_rate">host_response_rate</option>
+                                <option value="host_response_time">host_response_time</option>
+
+
+                            </select>
+                        </div>
+                    </div> 
+                    <div class="row">
+                            <img src="/images/bathrooms.jpg" id="image-swap-karen" style="width: 400px">
+    
+                    </div>
+            </div>
+
         </div>
         <div class="cuadro2">
             <div class="container">
@@ -45,7 +72,7 @@
                     </div>
                     
                     <div class="row">
-                        <img src="/moran/calculated_host_listings_count@availability_365.png" id="image-swap">
+                        <img src="/moran/calculated_host_listings_count@availability_365.png" id="image-swap" style="width: 650px">
 
                     </div>
 
@@ -71,6 +98,12 @@
                     console.log(ruta);
                     
                     $("#image-swap").attr("src",ruta);
+                });
+
+                $('#preciovs').change( function() {  
+                    let ruta = "/images/"+$('#preciovs').val()+".jpg";
+                    console.log(ruta);
+                    $("#image-swap-karen").attr("src",ruta);
                 });
             });
             </script>
